@@ -31,7 +31,7 @@ function handleYesClick() {
   buttonsContainer.classList.add("hidden");
   setTimeout(() => {
     
-    window.location.href = "/flowers.html";
+    window.location.href = "/valentine/flowers.html";
   }, 2500);
 }
 
