@@ -19,9 +19,11 @@ noButton.addEventListener("click", function () {
     const imageIndex = Math.min(noCount, MAX_IMAGES);
     changeImage(imageIndex);
     resizeYesButton();
+    yesButton.style["display"] = 'none'
     updateNoButtonText();
     if (noCount === MAX_IMAGES) {
       play = false;
+      yesButton.style["display"] = 'block'
     }
   }
 });
@@ -50,7 +52,7 @@ function generateMessage(noCount) {
     "Зараз доставка приїде в школу -_-",
     "Добре подумай",
     "Точно",
-    "А якщо це handmade",
+    "Найобую, нічого не купляв. Нажимай ТАК,там пиздаті квіточки з тік току :) З днем валіка тебе ",
   ];
 
   const messageIndex = Math.min(noCount, messages.length - 1);
