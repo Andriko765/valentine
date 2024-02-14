@@ -49,13 +49,28 @@ function generateMessage(noCount) {
     "Ти впевнена?",
     "Зараз доставка приїде в школу -_-",
     "Добре подумай",
-    "Добре я нічого не купляв",
-    "Це подарок своїми руками",
+    "Точно",
+    "А якщо це handmade",
   ];
 
   const messageIndex = Math.min(noCount, messages.length - 1);
   return messages[messageIndex];
 }
+
+function generateButtonText(noCount) {
+  const messages = [
+    "Ні",
+    "Впевненна",
+    "НІ",
+    "НІ",
+    "Точно",
+    "НІ",
+  ];
+
+  const messageIndex = Math.min(noCount, messages.length - 1);
+  return messages[messageIndex];
+}
+
 
 function changeImage(image) {
   catImg.src = `img/cat-${image}.jpg`;
@@ -63,4 +78,5 @@ function changeImage(image) {
 
 function updateNoButtonText() {
   titleElement.innerHTML = generateMessage(noCount);
+  noButton.innerHTML = generateButtonText(noCount);
 }
